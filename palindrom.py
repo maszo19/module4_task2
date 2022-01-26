@@ -1,19 +1,16 @@
 def is_palindrome(word):
-    '''
+    """
     Checks if the passed string is palindrome and returns bool.
     :param word
     :return: bool
-    '''
-    for i in range(len(word) // 2):
-        a = word[i]
-        b = word[-1 -i]
-        if word[i] != word[-1 -i]:
-            return False
-    return True
+    """
+    word = word.lower()
+    return word == word[::-1]
+
 
 word1 = 'palindrome'
-word2 = 'kayak'
-word3 = 'abcdeedcba'
+word2 = 'Kayak'
+word3 = 'abcDEedcba'
 word4 = 'abcddedcba'
 
 print(is_palindrome(word1))
